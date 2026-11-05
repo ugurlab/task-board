@@ -1,9 +1,11 @@
 # Task Board — Desk & Bench
 Download-only task board. No live web application is hosted here.
 
-Download page: https://ugurlab.github.io/task-board/
+Download page: https://ugurlab.github.io/task-board/ (Türkçe: https://ugurlab.github.io/task-board/tr.html)
 ZIP package: https://ugurlab.github.io/task-board/task-board.zip
 Catalogue: https://ugurlab.github.io/desk-and-bench/
+
+The download pages use the shared stylesheet and rules of the catalogue: read https://github.com/ugurlab/desk-and-bench/blob/main/DESIGN.md before editing them.
 
 Extract the ZIP and open task-board.html in a browser.
 English and Turkish are available in the menu.
