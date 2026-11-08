@@ -18,6 +18,9 @@ The app is in English only.
 - 1.1: English only (the language switch was removed); overdue dates shown as "1 Jan 2026"; backups are named `task-board-backup-YYYY-MM-DD.json`.
 - 1.0: First release.
 
+## Credits
+Task Board was designed by Ugur Comlekcioglu. The first version was built with Claude (Anthropic) and it was further developed with ChatGPT (OpenAI).
+
 ## Licence
 Task Board is open source under the [MIT License](LICENSE). You are welcome to use, change and share it, including in your own projects, as long as you keep the copyright notice and the licence text, which credit the original author.
 
