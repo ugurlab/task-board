@@ -18,5 +18,10 @@ The app is in English only.
 - 1.1: English only (the language switch was removed); overdue dates shown as "1 Jan 2026"; backups are named `task-board-backup-YYYY-MM-DD.json`.
 - 1.0: First release.
 
-## Third-party code
-Includes SortableJS 1.15.2 (MIT). Licensing for the rest of the project has not been selected yet.
+## Licence
+Task Board is open source under the [MIT License](LICENSE). You are welcome to use, change and share it, including in your own projects, as long as you keep the copyright notice and the licence text, which credit the original author.
+
+Includes SortableJS 1.15.2, also under the MIT License.
+
+## Contributing
+Issues and pull requests are welcome. If you build on Task Board, a link back to this repository is appreciated.
