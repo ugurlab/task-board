@@ -1,20 +1,22 @@
 # Task Board — Desk & Bench
-Download-only task board. No live web application is hosted here.
 
-Download page: https://ugurlab.github.io/task-board/ (Türkçe: https://ugurlab.github.io/task-board/tr.html)
-ZIP package: https://ugurlab.github.io/task-board/task-board.zip
-Catalogue: https://ugurlab.github.io/desk-and-bench/
+A download-only task board. No live web application is hosted here.
 
-The download pages use the shared stylesheet and rules of the catalogue: read https://github.com/ugurlab/desk-and-bench/blob/main/DESIGN.md before editing them.
+- Download page: https://ugurlab.github.io/task-board/
+- ZIP package: https://ugurlab.github.io/task-board/task-board.zip
+- Catalogue: https://ugurlab.github.io/desk-and-bench/
 
-Extract the ZIP and open task-board.html in a browser.
-English and Turkish are available in the menu.
-Tasks stay in this browser only; export JSON backups regularly.
-Local-file storage behavior varies by browser. Keep using the same file and browser.
+The download page uses the catalogue's shared stylesheet and rules: read https://github.com/ugurlab/desk-and-bench/blob/main/DESIGN.md before editing it.
 
-## Türkçe
-ZIP dosyasını indirip çıkarın. task-board.html dosyasını tarayıcıda açın.
-Kurulum gerekmez. Cihazlar arası eşitleme yoktur. Düzenli JSON yedeği indirin.
+## Use
+Extract the ZIP and open `task-board.html` in Chrome, Edge or Firefox. No installation or internet connection is needed.
+Tasks stay in this browser only and do not sync between devices. Clearing browser data can erase them, so download JSON backups regularly from the ⋯ menu. Keep using the same file and browser.
+
+The app is in English only.
+
+## Changes
+- 1.1: English only (the language switch was removed); overdue dates shown as "1 Jan 2026"; backups are named `task-board-backup-YYYY-MM-DD.json`.
+- 1.0: First release.
 
 ## Third-party code
-Includes SortableJS 1.15.2 (MIT). Original project licensing has not yet been selected.
+Includes SortableJS 1.15.2 (MIT). Licensing for the rest of the project has not been selected yet.
