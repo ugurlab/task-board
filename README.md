@@ -15,6 +15,7 @@ Tasks stay in this browser only and do not sync between devices. Clearing browse
 The app is in English only.
 
 ## Changes
+- 1.1.1: licence texts (Task Board and SortableJS) moved into a comment at the top of `task-board.html`; the ZIP no longer has a separate `LICENSE.txt`. The app itself is unchanged.
 - 1.1: English only (the language switch was removed); overdue dates shown as "1 Jan 2026"; backups are named `task-board-backup-YYYY-MM-DD.json`.
 - 1.0: First release.
 
@@ -24,7 +25,7 @@ Task Board was designed by Ugur Comlekcioglu. The first version was built with C
 ## Licence
 Task Board is open source under the [MIT License](LICENSE). You are welcome to use, change and share it, including in your own projects, as long as you keep the copyright notice and the licence text, which credit the original author.
 
-Includes SortableJS 1.15.2, also under the MIT License.
+Includes SortableJS 1.15.2, also under the MIT License. Both licence texts are kept in a comment at the top of `task-board.html`, so every downloaded copy carries them.
 
 ## Contributing
 Issues and pull requests are welcome. If you build on Task Board, a link back to this repository is appreciated.
