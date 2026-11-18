@@ -3,7 +3,7 @@
 A download-only task board. No live web application is hosted here.
 
 - Download page: https://ugurlab.github.io/task-board/
-- ZIP package: https://github.com/ugurlab/task-board/releases/download/v1.2.0/task-board-1.2.0.zip
+- ZIP package: https://github.com/ugurlab/task-board/releases/download/v1.2.1/task-board-1.2.1.zip
 - Catalogue: https://ugurlab.github.io/desk-and-bench/
 
 The download page uses the catalogue's shared stylesheet and rules: read https://github.com/ugurlab/desk-and-bench/blob/main/DESIGN.md before editing it.
@@ -15,6 +15,7 @@ Tasks stay in this browser only and do not sync between devices. Clearing browse
 The app is in English only.
 
 ## Changes
+- 1.2.1: removed the This week and Streak counters. Existing task completion, backups, focus, overdue tasks and section behavior are preserved.
 - 1.2.0: opening a strip puts it first; at the configured or width-limited capacity, the rightmost open section folds. Remaining open sections keep their order. Manual dragging is respected, and old tasks/backups remain compatible. Added the catalogue link above the app title.
 - 1.1.1: licence texts (Task Board and SortableJS) moved into a comment at the top of `task-board.html`; the ZIP no longer has a separate `LICENSE.txt`. The app itself is unchanged.
 - 1.1: English only (the language switch was removed); overdue dates shown as "1 Jan 2026"; backups are named `task-board-backup-YYYY-MM-DD.json`.
