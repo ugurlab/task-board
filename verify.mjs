@@ -1,14 +1,14 @@
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
 import zlib from 'node:zlib';
-function readZipEntry(file,name){
+export function readZipEntry(file,name){
  const b=fs.readFileSync(file);let end=-1;for(let i=b.length-22;i>=Math.max(0,b.length-65557);i--){if(b.readUInt32LE(i)===0x06054b50){end=i;break;}}if(end<0)throw Error('ZIP directory missing');let p=b.readUInt32LE(end+16);for(let n=0;n<b.readUInt16LE(end+10);n++){if(b.readUInt32LE(p)!==0x02014b50)throw Error('Bad ZIP directory');const size=b.readUInt32LE(p+20),method=b.readUInt16LE(p+10),nl=b.readUInt16LE(p+28),el=b.readUInt16LE(p+30),cl=b.readUInt16LE(p+32),offset=b.readUInt32LE(p+42);const fn=b.subarray(p+46,p+46+nl).toString('utf8');if(fn===name){const begin=offset+30+b.readUInt16LE(offset+26)+b.readUInt16LE(offset+28);const data=b.subarray(begin,begin+size);if(method===0)return data.toString('utf8');if(method===8)return zlib.inflateRawSync(data).toString('utf8');throw Error('Unsupported ZIP compression');}p+=46+nl+el+cl;}throw Error('ZIP entry missing: '+name);
 }
 const html=readZipEntry(new URL('./task-board.zip',import.meta.url),'task-board.html');
-assert.match(html,/Task Board 1\.2\.1/);assert.doesNotMatch(html,/statWeek|statStreak|function weekCount|function streak|S\.log\.push/);assert.match(html,/SortableJS/);assert.match(html,/Permission is hereby granted/);assert.doesNotMatch(html,/firebase|gstatic\.com/i);assert.match(html,/class="catalogue-brand"/);
+assert.match(html,/Task Board 1\.3\.0/);assert.doesNotMatch(html,/statWeek|statStreak|function weekCount|function streak|S\.log\.push/);assert.match(html,/SortableJS/);assert.match(html,/Permission is hereby granted/);assert.doesNotMatch(html,/firebase|gstatic\.com/i);assert.match(html,/class="catalogue-brand"/);
 const notice=html.slice(html.indexOf('<!--')+4,html.indexOf('-->'));assert.equal(notice.includes('--'),false);
 
 const logic=html.slice(html.indexOf('function orderedColumns('),html.indexOf('function bindSortable('));
-const ctx=vm.createContext({S:null,Date,STRIP_W:46,getComputedStyle:()=>({paddingLeft:'16',paddingRight:'16',columnGap:'14'})});vm.runInContext(logic,ctx);
+const ctx=vm.createContext({S:null,Date,STRIP_W:46,workspaceColumns:()=>ctx.S.columns,workspaceOf:()=>"projects",selectWorkspace(){},getComputedStyle:()=>({paddingLeft:'16',paddingRight:'16',columnGap:'14'})});vm.runInContext(logic,ctx);
 const ids=a=>Array.from(a,x=>x.id),board={clientWidth:1100};
 const make=()=>({maxFull:3,columns:['a','b','c','d','e'].map((id,i)=>({id,collapsed:i>2,used:i*100,tasks:[{id:'t'+id,text:'Keep '+id}]}))});
 ctx.S=make();const tasks=JSON.stringify(ctx.S.columns.map(c=>c.tasks));
