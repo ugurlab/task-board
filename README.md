@@ -3,7 +3,7 @@
 A download-only task board. No live web application is hosted here.
 
 - Download page: https://ugurlab.github.io/task-board/
-- ZIP package: https://github.com/ugurlab/task-board/releases/download/v1.3.0/task-board-1.3.0.zip
+- ZIP package: https://github.com/ugurlab/task-board/releases/download/v1.3.1/task-board-1.3.1.zip
 - Catalogue: https://ugurlab.github.io/desk-and-bench/
 
 The download page uses the catalogue's shared stylesheet and rules: read https://github.com/ugurlab/desk-and-bench/blob/main/DESIGN.md before editing it.
@@ -20,6 +20,7 @@ Ongoing and Projects each hold up to 10 sections. Ongoing sections remain when t
 Before updating, export a JSON backup. Keep the replacement HTML in the same location and browser, or restore that backup. Existing sections and older backups open in Projects. Workspace membership is saved in backups; use 1.3.0 or newer for the two-tab view. The app remains English-only and offline, with the same local-storage key and backup schema.
 
 ## Changes
+- 1.3.1: Open tasks stay above completed tasks in each section; reopening returns a task to the open group. Existing records and backups remain compatible.
 - 1.3.0: Ongoing and Projects tabs, each with a 10-section limit; shared focus/overdue; safe section movement and archive restore; preserve hidden-workspace sections when dragging. Added the app signature required by DESIGN.md.
 - 1.2.1: removed the This week and Streak counters. Existing task completion, backups, focus, overdue tasks and section behavior are preserved.
 - 1.2.0: opening a strip puts it first; at the configured or width-limited capacity, the rightmost open section folds. Remaining open sections keep their order. Manual dragging is respected, and old tasks/backups remain compatible. Added the catalogue link above the app title.
